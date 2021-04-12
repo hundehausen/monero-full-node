@@ -4,7 +4,7 @@ LABEL author="hundehausen" \
       
 ENV MONERO_VERSION=0.17.2.0 MONERO_SHA256=59e16c53b2aff8d9ab7a8ba3279ee826ac1f2480fbb98e79a149e6be23dd9086
 
-RUN apt-get update && apt-get install --no-install-recommends -y curl bzip2
+RUN apt-get update && apt-get install -y curl bzip2
 
 WORKDIR /root
 
