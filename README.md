@@ -1,6 +1,6 @@
 # monero-full-node
 
-docker image to run a monero full network node
+docker image to run a monero full node on mainnet
 
 # Usage
 
@@ -8,6 +8,7 @@ docker image to run a monero full network node
 
 ## Release Notes
 11.04.2021: v0.17.2.0
+12.04.2021: added healthchecks and disabled zmq in monerod
 
 ## Updating
 Manual Way
