@@ -17,7 +17,7 @@ RUN curl https://dlsrc.getmonero.org/cli/monero-linux-x64-v$MONERO_VERSION.tar.b
 
 FROM ubuntu:20.04
 
-RUN apt-get update && apt-get install --no-install-recommends -y curl
+RUN apt-get update && apt-get install -y curl
 RUN useradd -ms /bin/bash monero && mkdir -p /home/monero/.bitmonero && chown -R monero:monero /home/monero/.bitmonero
 USER monero
 WORKDIR /home/monero
