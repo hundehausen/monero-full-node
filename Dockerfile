@@ -17,7 +17,6 @@ RUN curl https://dlsrc.getmonero.org/cli/monero-linux-x64-v$MONERO_VERSION.tar.b
 
 FROM ubuntu:20.04
 
-#RUN apt-get update && apt-get install --no-install-recommends -y curl
 RUN apt-get update && apt-get install --no-install-recommends -y wget
 RUN useradd -ms /bin/bash monero && mkdir -p /home/monero/.bitmonero && chown -R monero:monero /home/monero/.bitmonero
 USER monero
@@ -29,7 +28,7 @@ COPY --chown=monero:monero --from=build /root/monerod /home/monero/monerod
 VOLUME /home/monero/.bitmonero
 
 EXPOSE 38080 38081
-#HEALTHCHECK --interval=30s --timeout=5s CMD /bin/bash curl --fail http://localhost:38081/get_info || exit 1
+
 HEALTHCHECK --interval=30s --timeout=5s CMD wget --no-verbose --tries=1 --spider http://localhost:38081/get_info || exit 
 
 ENTRYPOINT ["./monerod"]
