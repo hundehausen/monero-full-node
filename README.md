@@ -4,7 +4,7 @@ docker image to run a monero full node on mainnet
 
 # Usage
 
-`docker run -tid --restart=always -v xmrchain:/home/monero/.bitmonero -p 18080:18080 -p 18081:18081 --name=monerod-mainnet hundehausen/monero-full-node`
+`docker run -tid --restart=always -v xmrchain:/home/monero/.bitmonero -p 38080:38080 -p 38081:38081 --name=monerod-stagenet hundehausen/monero-stagenet-full-node`
 
 ## Release Notes
 11.04.2021: v0.17.2.0
@@ -13,10 +13,10 @@ docker image to run a monero full node on mainnet
 ## Updating
 Manual Way
 ```
-docker stop monerod-mainnet
-docker rm monerod-mainnet
-docker pull hundehausen/monero-full-node
-docker run -tid --restart=always -v xmrchain:/home/monero/.bitmonero -p 18080:18080 -p 18081:18081 --name=monerod-mainnet hundehausen/monero-full-node
+docker stop monerod-stagenet
+docker rm monerod-stagenet
+docker pull hundehausen/monero-stagenet-full-node
+docker run -tid --restart=always -v xmrchain:/home/monero/.bitmonero -p 38080:38080 -p 38081:38081 --name=monerod-stagenet hundehausen/monero-stagenet-full-node
 ```
 
 Automatic way
