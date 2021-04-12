@@ -27,8 +27,8 @@ COPY --chown=monero:monero --from=build /root/monerod /home/monero/monerod
 # blockchain location
 VOLUME /home/monero/.bitmonero
 
-EXPOSE 18080 18081
-HEALTHCHECK --interval=30s --timeout=5s CMD /bin/bash curl --fail http://localhost:18081/get_info || exit 1
+EXPOSE 38080 38081
+HEALTHCHECK --interval=30s --timeout=5s CMD /bin/bash curl --fail http://localhost:38081/get_info || exit 1
 
 ENTRYPOINT ["./monerod"]
-CMD ["--non-interactive", "--rpc-restricted-bind-ip=0.0.0.0", "--rpc-restricted-bind-port=18081", "--no-zmq", "--out-peers=16"]
+CMD ["--non-interactive", "--stagenet", "--rpc-restricted-bind-ip=0.0.0.0", "--rpc-restricted-bind-port=38081", "--no-zmq", "--out-peers=16"]
