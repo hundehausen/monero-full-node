@@ -31,4 +31,4 @@ EXPOSE 18080 18081
 HEALTHCHECK --interval=30s --timeout=5s CMD wget --no-verbose --tries=1 --spider http://localhost:18081/get_info || exit 
 
 ENTRYPOINT ["./monerod"]
-CMD ["--non-interactive", "--rpc-restricted-bind-ip=0.0.0.0", "--rpc-restricted-bind-port=18081", "--no-zmq", "--out-peers=16"]
+CMD ["--non-interactive", "--restricted-rpc", "--rpc-bind-ip=0.0.0.0", "--confirm-external-bind", "--enable-dns-blocklist", "--no-zmq", "--out-peers=16"]
