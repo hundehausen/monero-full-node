@@ -32,4 +32,4 @@ EXPOSE 38080 38081
 HEALTHCHECK --interval=30s --timeout=5s CMD wget --no-verbose --tries=1 --spider http://localhost:38081/get_info || exit 
 
 ENTRYPOINT ["./monerod"]
-CMD ["--non-interactive", "--stagenet", "--rpc-restricted-bind-ip=0.0.0.0", "--rpc-restricted-bind-port=38081", "--no-zmq", "--out-peers=16"]
+CMD ["--non-interactive", "--stagenet", "--restricted-rpc", "--rpc-bind-ip=0.0.0.0", "--confirm-external-bind", "--enable-dns-blocklist", "--no-zmq", "--out-peers=16"]
