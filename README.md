@@ -7,8 +7,11 @@ docker image to run a monero full node on mainnet
 `docker run -tid --restart=always -v xmrchain:/home/monero/.bitmonero -p 38080:38080 -p 38081:38081 --name=monerod-stagenet hundehausen/monero-stagenet-full-node`
 
 ## Release Notes
+```
 11.04.2021: v0.17.2.0
 12.04.2021: added healthchecks and disabled zmq in monerod
+01.09.2021: v0.17.2.3
+```
 
 ## Updating
 Manual Way
