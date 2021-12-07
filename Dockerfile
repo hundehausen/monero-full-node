@@ -2,7 +2,7 @@ FROM ubuntu:20.04 AS build
 LABEL author="hundehausen" \
       maintainer="hundehausen"
       
-ENV MONERO_VERSION=0.17.2.3 MONERO_SHA256=8069012ad5e7b35f79e35e6ca71c2424efc54b61f6f93238b182981ba83f2311
+ENV MONERO_VERSION=0.17.3.0 MONERO_SHA256=ac18ce3d1189410a5c175984827d5d601974733303411f6142296d647f6582ce
 
 RUN apt-get update && apt-get install -y curl bzip2
 
@@ -31,4 +31,4 @@ EXPOSE 18080 18081
 HEALTHCHECK --interval=30s --timeout=5s CMD wget --no-verbose --tries=1 --spider http://localhost:18081/get_info || exit 
 
 ENTRYPOINT ["./monerod"]
-CMD ["--non-interactive", "--restricted-rpc", "--rpc-bind-ip=0.0.0.0", "--confirm-external-bind", "--enable-dns-blocklist", "--no-zmq", "--out-peers=16"]
+CMD ["--non-interactive", "--restricted-rpc", "--rpc-bind-ip=0.0.0.0", "--confirm-external-bind", "--enable-dns-blocklist", "--no-zmq", "--out-peers=16", "--prune-blockchain"]
