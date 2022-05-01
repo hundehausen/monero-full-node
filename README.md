@@ -12,6 +12,7 @@ docker image to run a monero full node on mainnet
 12.04.2021: added healthchecks and disabled zmq in monerod
 01.09.2021: v0.17.2.3
 07.12.2021: v0.17.3.0
+01.04.2022: v0.17.3.2
 ```
 
 ## Updating
