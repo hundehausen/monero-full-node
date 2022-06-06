@@ -2,7 +2,7 @@ FROM ubuntu:20.04 AS build
 LABEL author="hundehausen" \
       maintainer="hundehausen"
       
-ENV MONERO_VERSION=0.17.3.0 MONERO_SHA256=ac18ce3d1189410a5c175984827d5d601974733303411f6142296d647f6582ce
+ENV MONERO_VERSION=0.17.3.2 MONERO_SHA256=1e54acd749265d9439d3733441c645d9b058316283c8f21cca2a333c1238cd16
 
 RUN apt-get update && apt-get install -y curl bzip2
 
