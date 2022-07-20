@@ -1,6 +1,6 @@
 # monero-full-node
 
-docker image to run a monero full node on mainnet
+docker image to run a monero full node on stagenet
 
 # Usage
 
@@ -13,6 +13,7 @@ docker image to run a monero full node on mainnet
 01.09.2021: v0.17.2.3
 07.12.2021: v0.17.3.0
 06.06.2022: v0.17.3.2
+20.07.2022: v0.18.0.0
 ```
 
 ## Updating
