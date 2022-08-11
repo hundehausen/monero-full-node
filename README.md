@@ -14,6 +14,7 @@ docker image to run a monero full node on stagenet
 07.12.2021: v0.17.3.0
 06.06.2022: v0.17.3.2
 20.07.2022: v0.18.0.0
+11.08.2022: v0.18.1.0
 ```
 
 ## Updating
