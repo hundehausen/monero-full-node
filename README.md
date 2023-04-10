@@ -18,6 +18,7 @@ docker image to run a monero full node (pruned) on mainnet
 20.09.2022: v0.18.1.1
 03.10.2022: v0.18.1.2
 01.03.2023: v0.18.2.0
+10.04.2023: v0.18.2.2
 ```
 
 ## Updating
