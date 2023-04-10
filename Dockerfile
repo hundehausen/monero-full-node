@@ -2,7 +2,7 @@ FROM --platform=linux/amd64 ubuntu:22.04 AS build
 LABEL author="hundehausen" \
       maintainer="hundehausen"
       
-ENV MONERO_VERSION=0.18.2.0 MONERO_SHA256=83e6517dc9e5198228ee5af50f4bbccdb226fe69ff8dd54404dddb90a70b7322
+ENV MONERO_VERSION=0.18.2.2 MONERO_SHA256=186800de18f67cca8475ce392168aabeb5709a8f8058b0f7919d7c693786d56b
 
 RUN apt-get update && apt-get install -y curl bzip2
 
